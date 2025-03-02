@@ -34,3 +34,29 @@ It allows us collaboration among multiple developers.
 1. Collaboration purpose also we can use. Multiple developers can work on the same project simultaneously without overwriting each other's work.
 
 1. Branching & Merging:- Work on different features separately and merge them later.
+
+
+## Github:-
+github is a cloud-based platform for hosting and managing Git repositories. 
+
+It provides a user-friendly interface to work with Git, enabling developers to collaborate, track changes, and manage projects efficiently.
+
+## Git vs Github:-
+1. Git:-
+    <b> git is a distributed version control system which is tracking changes in our code </b>
+    - Manages versions, branches, and commits locally.
+    - Local storage (on your computer)
+    - works offline (local repository)
+    - Can be used alone or in a team via shared repositories.
+    - No built-in access control.
+    - Can be integrated manually
+
+
+1. Github:-
+    <b> GitHub is a cloud-based platform for hosting and managing Git repositories. </b>
+    - Provides a remote Git repository with additional collaboration tools.
+    - Cloud-based storage (accessible from anywhere)
+    - Requires internet for syncing with remote repositories.
+    - Designed for team collaboration, code reviews, and issue tracking.
+    - Provides private repositories, access control, and role-based permissions.
+    - Supports GitHub Actions for automation, CI/CD, and testing.
