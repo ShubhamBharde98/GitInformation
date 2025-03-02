@@ -60,3 +60,22 @@ It provides a user-friendly interface to work with Git, enabling developers to c
     - Designed for team collaboration, code reviews, and issue tracking.
     - Provides private repositories, access control, and role-based permissions.
     - Supports GitHub Actions for automation, CI/CD, and testing.
+
+#### Note:- You can use git without github, but you can't use github without git. 
+
+## git setup configuration:-
+    git config --global user.email <"email id">
+    git config --global user.name <"name">
+    git config --global --edit
+
+### Can I Set Config for Only One Project?
+Yes! If you don’t want to set your username and email globally, you can configure them only for a specific repository:
+
+``` bash 
+    git config --local user.email "project-email@example.com"
+    
+    git config --local user.name "Project Name"
+```
+- This setting applies only inside that repository.
+
+- Useful when working on multiple projects with different GitHub accounts
