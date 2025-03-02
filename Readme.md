@@ -23,3 +23,14 @@ It allows us collaboration among multiple developers.
     - gives offline support, easily collaboration among multiple devlopers
     - Stores differences
     - Faster & Smaller Repository Size
+
+## Why do we need of git?
+1. tracking multiple files or any changes in our code.
+
+1. managing different versions. 
+
+1. rollback support (we can easily revert the previous version). 
+
+1. Collaboration purpose also we can use. Multiple developers can work on the same project simultaneously without overwriting each other's work.
+
+1. Branching & Merging:- Work on different features separately and merge them later.
