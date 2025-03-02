@@ -64,9 +64,11 @@ It provides a user-friendly interface to work with Git, enabling developers to c
 #### Note:- You can use git without github, but you can't use github without git. 
 
 ## git setup configuration:-
+``` bash
     git config --global user.email <"email id">
     git config --global user.name <"name">
     git config --global --edit
+```
 
 ### Can I Set Config for Only One Project?
 Yes! If you don’t want to set your username and email globally, you can configure them only for a specific repository:
@@ -79,3 +81,25 @@ Yes! If you don’t want to set your username and email globally, you can config
 - This setting applies only inside that repository.
 
 - Useful when working on multiple projects with different GitHub accounts
+
+
+## Git Commands:-
+1. git init
+1. git add < file name > OR git add .
+1. git commit -m <"message">
+1. git push -u origin < branch name > OR git push
+
+
+1. git clone < httpsLink >
+1. git remote add origin < httpsLink >
+
+1. git status
+1. git log
+1. git remote -v
+1. git branch
+
+
+1. git branch -M < branch name >
+1. git checkout < branch name >
+
+1. git commit --amend -m <"new message">
