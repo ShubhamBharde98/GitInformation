@@ -103,3 +103,66 @@ Yes! If you don’t want to set your username and email globally, you can config
 1. git checkout < branch name >
 
 1. git commit --amend -m <"new message">
+
+
+## Git Authentication methods:-
+Git supports multiple authentication methods:
+
+1. HTTPS with Username & Password (Deprecated)
+1. HTTPS with Personal Access Token (PAT) ✅ (easy)
+1. SSH Authentication ✅ (Recommended & hard)
+1. Credential Helper (for HTTPS) ✅ (very easy)
+1. GPG Signing for Secure Authentication
+
+## Detail steps for Git Authentication Methods:-
+### 1] OAuth authentication via Git Credential Manager(GCM) OR Credential Helper (for HTTPS):-
+
+#### What Happens in This Step?
+- Git detects that authentication is needed for pushing to GitHub.
+- Instead of asking for a username & password, it opens a browser window.
+- You log in to GitHub, and GitHub grants OAuth access to your local Git client.
+- Git Credential Manager (GCM) securely stores the authentication token.
+- Your push operation automatically succeeds without needing manual authentication again.
+
+#### Why Is This Easier?
+- No need to remember/store Personal Access Tokens (PATs).
+- No need to set up SSH keys.
+- Works seamlessly across Windows, macOS, and Linux.
+
+#### What is Handling This?
+- Git Credential Manager (GCM) is handling the authentication.
+- GCM supports OAuth authentication and securely stores credentials (Windows Credential Manager, macOS Keychain, or Linux Secret Service).
+
+### 2] PAT (Personal Access Token):-
+- GitHub and GitLab no longer support username/password authentication over HTTPS. Instead, they require a Personal Access Token (PAT).
+
+- Generate a Personal Access Token (PAT)
+    - For GitHub: Go to GitHub Tokens → Generate a new token.
+
+- Git will prompt for a username. Enter your GitHub/GitLab username and use the PAT as the password.
+
+- Save Credentials (Optional)
+``` bash 
+git config --global credential.helper store
+```
+
+### 3] SSH Authentication (Recommended):-
+``` bash 
+ssh-keygen –t ed25519 –C <”email id”>
+OR
+ssh-keygen –t rsa –b 4096 –C <”email id”> 
+```
+
+- enter file name in that we getting key 
+    - e.g.:- < projectNameKey >
+-  done!!! You will get <“projectNameKey.pub”> file
+
+- ls –la
+- cat <”projectNameKey.pub”> // read that file and print content of key
+
+- copy that key & go to github accout page 
+- in github accout page go to setting  click on SSH keys
+- then hit the New SSH Key button
+- enter Title field as “< projectNameKey >”
+- & enter Key field as “< paste key which is you already copied >” & hit on Add SSH key button.
+- Done!!!
