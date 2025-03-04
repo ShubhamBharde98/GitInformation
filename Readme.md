@@ -166,3 +166,15 @@ ssh-keygen –t rsa –b 4096 –C <”email id”>
 - enter Title field as “< projectNameKey >”
 - & enter Key field as “< paste key which is you already copied >” & hit on Add SSH key button.
 - Done!!!
+
+
+## Errors which is i gotted & How i tackled.
+### Error 1:-
+#### remote: Permission to ShubhamBharde98/GitInformation.git denied to ShubhamBharde.
+#### fatal: unable to access 'https://github.com/ShubhamBharde98/GitInformation.git/': The requested URL returned error: 403 
+
+### Error 1 Solution:-
+1. open control panel ==> search & open credential manager
+1. click on Windows Credentials
+1. remove the previous git credential
+1. done!!! 
