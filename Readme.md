@@ -104,6 +104,8 @@ Yes! If you don’t want to set your username and email globally, you can config
 
 1. git commit --amend -m <"new message">
 
+1. git rm --cached < file name >
+1. git rm -rf .git/
 
 ## Git Authentication methods:-
 Git supports multiple authentication methods:
@@ -115,7 +117,7 @@ Git supports multiple authentication methods:
 1. GPG Signing for Secure Authentication
 
 ## Detail steps for Git Authentication Methods:-
-### 1] OAuth authentication via Git Credential Manager(GCM) OR Credential Helper (for HTTPS):-
+### 1] OAuth authentication via Git Credential Manager(GCM) OR Credential Helper (for HTTPS) ✅:-
 
 #### What Happens in This Step?
 - Git detects that authentication is needed for pushing to GitHub.
@@ -146,7 +148,7 @@ Git supports multiple authentication methods:
 git config --global credential.helper store
 ```
 
-### 3] SSH Authentication (Recommended):-
+### 3] SSH Authentication (Recommended) ✅:-
 ``` bash 
 ssh-keygen –t ed25519 –C <”email id”>
 OR
@@ -161,7 +163,7 @@ ssh-keygen –t rsa –b 4096 –C <”email id”>
 - cat <”projectNameKey.pub”> // read that file and print content of key
 
 - copy that key & go to github accout page 
-- in github accout page go to setting  click on SSH keys
+- in github accout page go to setting ==> click on SSH keys
 - then hit the New SSH Key button
 - enter Title field as “< projectNameKey >”
 - & enter Key field as “< paste key which is you already copied >” & hit on Add SSH key button.
@@ -178,3 +180,74 @@ ssh-keygen –t rsa –b 4096 –C <”email id”>
 1. click on Windows Credentials
 1. remove the previous git credential
 1. done!!! 
+
+
+## Basic Git Workflow:-
+### Step 1:- Create or Modify files 
+- Modify or create a file in the working directory.
+
+### Step 2:- Stage Changes
+- Use ```git add <file_name>``` or ```git add . ``` to move files to the staging area.
+
+- This marks changes as ready for commit.
+
+### Step 3:- Commit Changes 
+- Execute ```git commit -m "<descriptive_message>" ```to save changes to the local repository.
+
+- Commits serve as snapshots of the project.
+
+### Step 4:- Push Changes to Remote Repository 
+- Use ```git push -u origin <branch_name> ``` to upload changes.
+
+- Ensures version control across distributed environments.
+
+
+## Git Components:-
+### Local Repository:-
+- A version-controlled directory on a local machine.
+
+- Stores committed changes and allows local development.
+
+### Remote Repository:-
+- A centralized repository hosted on a remote server (e.g., GitHub, GitLab).
+
+- Facilitates collaboration by enabling multiple contributors.
+
+### Working Directory:-
+- The current state of files in a project.
+
+- Reflects untracked, modified, or staged changes.
+
+### Staging Area (Index):-
+- A temporary storage area where changes are prepared before committing.
+
+- Ensures only selected modifications are committed.
+
+### Push:-
+- Sends committed changes from the local repository to the remote repository.
+
+- May require authentication and branch specification.
+
+### Pull:-
+- Retrieves updates from a remote repository and integrates them into the local branch.
+
+- Equivalent to ```git fetch ``` followed by ```git merge ```.
+
+
+## Blob (Binary Large Object):-
+Blob stands for Binary Large Object.
+
+- Represents the content of a file as a unique SHA-1 hash.
+
+- Stores file data but excludes metadata (e.g., filename, permissions).
+
+- Git relies on content-based addressing rather than file names.
+
+## Tree Object:-
+- Represents a directory structure in Git.
+
+- Stores references to blobs (files) and other trees (subdirectories).
+
+- Facilitates efficient version tracking and branching mechanisms.
+
+
